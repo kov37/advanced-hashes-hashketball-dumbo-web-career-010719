@@ -215,24 +215,30 @@ def big_shoe_rebounds
 end
 
 def most_points_scored 
-  most_points = 0 
+  most_points = 0
+  name = ""
   game_hash[:home][:players].each do |nm, stat|
     maxShoe = stat[:points]
+    name = nm
     break
   end
   
   game_hash[:home][:players].each do |name, stat|
     if most_points < stat[:points]
       most_points = stat[:points]
-      maxRebounds = game_hash[:home][:players][name][:points]
+      name = game_hash[:home][:players][name]
     end
   end
   
   game_hash[:away][:players].each do |name, stat|
     if most_points < stat[:points]
       most_points = stat[:points]
-      maxRebounds = game_hash[:away][:players][name][:points]
+      name = game_hash[:away][:players][name]
     end
   end
-  most_points
+  name
 end
+
+def player_with_longest_name 
+  name = ""
+  
