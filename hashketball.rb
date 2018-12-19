@@ -221,5 +221,17 @@ def most_points scored
     break
   end
   
+  game_hash[:home][:players].each do |name, stat|
+    if most_points < stat[:points]
+      most_points = stat[:points]
+      maxRebounds = game_hash[:home][:players][name][:points]
+    end
+  end
   
+  game_hash[:away][:players].each do |name, stat|
+    if most_points < stat[:points]
+      most_points = stat[:points]
+      maxRebounds = game_hash[:away][:players][name][:points]
+    end
+  end
 end
