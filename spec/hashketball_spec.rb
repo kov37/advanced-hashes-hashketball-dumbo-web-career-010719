@@ -269,7 +269,7 @@ end
  #  describe '#player_with_longest_name' do
 
 #     it 'returns Brendan Haywood' do
-     expect(player_with_longest_name).to eq("Brendan Haywood")
+ #    expect(player_with_longest_name).to eq("Brendan Haywood")
  #  end
 
 #   end
