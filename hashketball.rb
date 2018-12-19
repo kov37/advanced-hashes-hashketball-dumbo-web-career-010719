@@ -131,9 +131,9 @@ end
 def num_points_scored(name)
   #binding.pry
   if game_hash[:away][:players][name]
-    game_hash[:away][:players][name]["points".to_sym] 
+    game_hash[:away][:players][name]["points"] 
   else
-    game_hash[:home][:players][name]["points".to_sym]
+    game_hash[:home][:players][name]["points"]
   end
 end
 
