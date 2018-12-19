@@ -214,7 +214,7 @@ def big_shoe_rebounds
   maxRebounds
 end
 
-def most_points scored 
+def most_points_scored 
   most_points = 0 
   game_hash[:home][:players].each do |nm, stat|
     maxShoe = stat[:points]
