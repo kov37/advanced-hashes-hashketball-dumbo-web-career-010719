@@ -234,4 +234,5 @@ def most_points_scored
       maxRebounds = game_hash[:away][:players][name][:points]
     end
   end
+  most_points
 end
