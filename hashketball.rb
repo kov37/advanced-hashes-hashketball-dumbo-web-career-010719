@@ -216,5 +216,10 @@ end
 
 def most_points scored 
   most_points = 0 
+  game_hash[:home][:players].each do |nm, stat|
+    maxShoe = stat[:points]
+    break
+  end
+  
   
 end
